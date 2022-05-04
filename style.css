@@ -9,6 +9,8 @@
   --primary-color: #00856F;
   --headline: #22262a;
   --paragraph: #484f56;
+  --brand-beige: #fffaf0;
+  --brand-light: #dce9e3;
   font-size: 62.5%;
 }
 
@@ -19,9 +21,8 @@ body{
 }
 
 header{
-  width: 37.5rem;
+  width: 47.5rem;
   margin: 4.1rem auto 0 auto;
-  padding: 0 2rem 0 2rem;
 }
 
 h4{
@@ -50,7 +51,7 @@ button{
   border-radius: 4rem;
   height: 6.2rem;
   width: 26.3rem;
-  color: #ffffff;
+  color: white;
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 700;
@@ -58,5 +59,50 @@ button{
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-  margin: 0 auto 6rem auto
+  margin: 0 auto 6rem auto;
+}
+
+.stats{
+  width: 32.7rem;
+  padding-block: 4rem;
+  margin-inline: auto;
+  background-color: var(--brand-beige);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
+}
+
+.stat h3{
+  font-size: 4.8rem;
+  color: var(--headline);
+  line-height: 130%;
+  margin-bottom: .4rem;
+}
+
+.stat p{
+  margin: 0;
+  color: var(--primary-color);
+  line-height: 150%; 
+}
+
+header img{
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
+
+header::before{
+  content: '';
+  width: 100vw;
+  height: 108rem;
+  background-color: var(--brand-light);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
