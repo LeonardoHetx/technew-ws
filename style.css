@@ -21,7 +21,7 @@ body{
 }
 
 header{
-  width: 47.5rem;
+  width: 37.5rem;
   margin: 4.1rem auto 0 auto;
 }
 
@@ -29,6 +29,7 @@ h4{
   font-size: 1.4rem;
   color: var(--primary-color);
   margin-bottom: 1.6rem;
+  text-transform: uppercase;
 }
 
 h1{
