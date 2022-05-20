@@ -16,7 +16,7 @@ function closeMenu() {
 
 ScrollReveal({
    origin: 'top',
-   distance: '30px',
+   distance: '80px',
    duration: 700
 }).reveal(`
    #home, 
@@ -24,4 +24,7 @@ ScrollReveal({
    #home .stats, 
    #services,
    #services header,
-   #services .card`);
+   #services .card
+   #about
+   #about header
+   #about .content`);
