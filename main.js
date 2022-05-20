@@ -21,10 +21,11 @@ ScrollReveal({
 }).reveal(`
    #home, 
    #home img, 
-   #home .stats, 
+   #home .stat, 
    #services,
    #services header,
-   #services .card
-   #about
-   #about header
-   #about .content`);
+   #services .card,
+   #about,
+   #about header,
+   #about .content,
+   #about .content img`);
