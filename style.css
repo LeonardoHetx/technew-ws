@@ -14,6 +14,7 @@
   --paragraph: #484f56;
   --brand-beige: #fffaf0;
   --brand-light: #dce9e3;
+  --brand-hover: #00473c;
   --bg-light: #f6f8f8;
 
   --nav-height: 7.2rem; 
@@ -54,7 +55,7 @@ ul{
 }
 
 section{
-  padding-top: 10rem;
+  padding-block: 10rem;
 }
 
 section header h4{
@@ -88,6 +89,40 @@ section .content p{
   color: var(--paragraph);
 }
 
+img{
+  width: 100%;
+}
+
+.button{
+  background: var(--primary-color);
+  border: none;
+  border-radius: 4rem;
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+  color: white;
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: var(--brand-hover);
+}
+
+.social-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
 /*==== NAVIGATION ============================================ */
 
 nav{
@@ -107,6 +142,7 @@ nav .wrapper {
 
 nav.scroll {
   background: var(--primary-color);
+  border-bottom: .1rem solid var(--bg-light);
 }
 
 nav.scroll .logo path{
@@ -188,13 +224,6 @@ body.menu-expanded .menu{
   margin-block: 4.8rem 10rem;
 }
 
-.social-links{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-}
-
 body.menu-expanded .logo, body.menu-expanded button{
   position: relative;
   z-index: 100;
@@ -226,28 +255,15 @@ body.menu-expanded button path{
   z-index: -1;
 }
 
+#home .button{
+  margin-inline: auto;
+}
+
 #home p{
   font-size: 1.8rem;
   line-height: 150%;
   color: var(--paragraph);
   margin-bottom: 3.2rem;
-}
-
-#home button{
-  background: var(--primary-color);
-  border: none;
-  border-radius: 4rem;
-  height: 6.2rem;
-  width: 26.3rem;
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-  margin: 0 auto 6rem auto;
 }
 
 #home img{
@@ -325,4 +341,60 @@ body.menu-expanded button path{
 
 #about .content p{
   margin-block: 2.4rem 6rem;
+}
+
+/*==== CONTACT ============================================ */
+
+#contact{
+  text-align: left;
+}
+
+#contact header{
+  margin-bottom: 3.2rem;
+}
+
+#contact ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/*==== FOOTER ============================================ */
+
+footer{
+  background-color: var(--primary-color);
+  padding-block: 6rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+footer .logo{
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+footer .logo svg{
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo path{
+  fill: #ffffff;
+}
+
+footer p{
+  color: var(--brand-beige);
+  line-height: 2;
+  margin-bottom: 3.2rem;
+}
+
+footer .social-links{
+  justify-content: flex-start0;
 }
