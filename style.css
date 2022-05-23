@@ -9,7 +9,7 @@
 }
 
 :root{
-  --hue: 190;
+  --hue: 170;
   --primary-color: hsl(var(--hue), 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
@@ -142,6 +142,20 @@ nav .wrapper {
   justify-content: space-between;
 }
 
+nav .logo path[fill*="#00856F"]{
+  fill: var(--primary-color);
+}
+
+nav button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav button.open-menu path[stroke*="#00856F"]{
+  stroke: var(--primary-color);
+}
+
 nav.scroll {
   background: var(--primary-color);
   border-bottom: .1rem solid var(--bg-light);
@@ -151,14 +165,8 @@ nav.scroll .logo path{
   fill: white;
 }
 
-nav.scroll button path {
+nav.scroll button.open-menu path {
   stroke: white;
-}
-
-nav button{
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
 /*==== MENU-EXPANDED ============================================ */
@@ -405,7 +413,7 @@ footer p{
 }
 
 footer .social-links{
-  justify-content: flex-start0;
+  justify-content: flex-start;
 }
 
 /*==== BACK TO TOP ============================================ */
@@ -424,4 +432,8 @@ footer .social-links{
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+#backToTopButton circle{
+  fill: var(--primary-color);
 }
