@@ -57,10 +57,6 @@ ul {
   padding-inline: 2.4rem;
 }
 
-section {
-  padding-block: 10rem;
-}
-
 section header h4 {
   font-size: 1.4rem;
   color: var(--primary-color);
@@ -647,6 +643,10 @@ footer .social-links {
 }
 
  /*==== SERVICES ======================= */
+
+ section#services{
+   padding-top: 8rem;
+ }
 
 #services h2{
   width: 47rem;
