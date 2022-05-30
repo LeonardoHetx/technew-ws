@@ -92,7 +92,7 @@ section .content p {
   color: var(--paragraph);
 }
 
-img {
+iframe, img {
   width: 100%;
 }
 
