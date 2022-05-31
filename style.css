@@ -696,15 +696,15 @@ footer .social-links {
 
   #contact .wrapper {
     width: 100%;
-    height: 200%;
+    height: 91vh;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'A B';
-    border: solid;
     padding: 0;
   }
 
-  section#contact {
-    padding-block: 0;
+  #contact .col-a{
+    align-self: center;
+    margin: auto;
   }
 
   #contact h2 {
