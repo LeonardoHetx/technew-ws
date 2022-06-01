@@ -708,7 +708,6 @@ footer .social-links {
   }
 
   #about .col-d {
-    border: solid;
     text-align: center;
   }
 
@@ -717,24 +716,16 @@ footer .social-links {
     padding-bottom: 4.3rem;
   }
 
-  #about .col-d .companies {
-  display: grid;
-    background-color: red; 
-  }
-
-  #about .col-d .company {
-    align-items: flex-end;
-  }
-  
-
-  #about .col-d svg {
-    width: 16rem;
-  }
-
   #about .col-d svg path {
     fill: var(--primary-color);
   }
 
+  #about .col-d ul.companies{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+  }
 
   /*==== CONTACT ======================= */
 
