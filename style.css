@@ -707,6 +707,35 @@ footer .social-links {
     width: 50%;
   }
 
+  #about .col-d {
+    border: solid;
+    text-align: center;
+  }
+
+  #about h5{
+    font-size: 2.4rem;
+    padding-bottom: 4.3rem;
+  }
+
+  #about .col-d .companies {
+  display: grid;
+    background-color: red; 
+  }
+
+  #about .col-d .company {
+    align-items: flex-end;
+  }
+  
+
+  #about .col-d svg {
+    width: 16rem;
+  }
+
+  #about .col-d svg path {
+    fill: var(--primary-color);
+  }
+
+
   /*==== CONTACT ======================= */
 
   #contact .wrapper {
