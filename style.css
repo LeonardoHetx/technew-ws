@@ -476,6 +476,14 @@ footer .social-links {
     grid-area: B;
   }
 
+  .col-c{
+    grid-area: C;
+  }
+
+  .col-d{
+    grid-area: D;
+  }
+
   section header h2 {
     font-size: 4rem;
     line-height: 5.2rem;
@@ -680,7 +688,9 @@ footer .social-links {
 
   #about .wrapper {
     grid-template-columns: 48rem 1fr;
-    grid-template-areas: 'B A';
+    grid-template-areas: 'A B'
+                         'C C'
+                         'D D';
     gap: 6.7rem;
   }
 
@@ -690,6 +700,11 @@ footer .social-links {
 
   #about .content p {
     margin-bottom: 0;
+    text-align: justify;
+  }
+
+  #about img{
+    width: 50%;
   }
 
   /*==== CONTACT ======================= */
@@ -704,6 +719,7 @@ footer .social-links {
 
   #contact .col-a{
     align-self: center;
+
     margin: auto;
   }
 
