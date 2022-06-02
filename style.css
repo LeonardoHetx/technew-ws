@@ -703,8 +703,34 @@ footer .social-links {
     text-align: justify;
   }
 
+  #about .col-c{
+    width: 100vw;
+    margin: auto;
+  }
+
+  #about .col-c .items{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    
+  }
+
+  #about .col-c .items .item{
+    flex: none;
+    width: 60%;
+    height: 400px;
+    scroll-snap-align: start;
+    pointer-events: none;
+    margin-inline: 50px;
+  }
+
   #about img{
-    width: 50%;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
   }
 
   #about .col-d {

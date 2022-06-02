@@ -1,3 +1,4 @@
+//TO CHECK WHICH SECTION YOU ARE IN
 window.addEventListener('scroll', onScroll)
 
 onScroll()
@@ -62,6 +63,8 @@ function closeMenu() {
    document.body.classList.remove('menu-expanded')
 }
 
+//SCROLL REVEAL API
+
 ScrollReveal({
    origin: 'top',
    distance: '80px',
@@ -77,3 +80,13 @@ ScrollReveal({
    #about header,
    #about .content,
    #about .content img`);
+
+   //SLIDER SECTION#ABOUT
+
+   document.querySelector('.items').addEventListener("wheel", event => {
+      if(event.deltaY > 0) {
+         event.target.scrollBy(300, 0)
+      } else {
+         event.target.scrollBy(-300, 0)
+      }
+   })
