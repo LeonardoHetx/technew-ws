@@ -686,8 +686,11 @@ footer .social-links {
 
   /*==== ABOUT ======================= */
 
+  section#about{
+    overflow: hidden;
+  }
+
   #about .wrapper {
-    width: 100%;
     padding: 0;
     grid-template-columns: 48rem 1fr;
     grid-template-areas: 'A B'
@@ -696,21 +699,17 @@ footer .social-links {
     gap: 6.7rem;
   }
 
-  #about .col-a {
-    align-self: center;
-  }
-
   #about .content p {
     margin-bottom: 0;
     text-align: justify;
   }
 
+  /* SLIDER START */
+
   #about .col-c{
     width: 100%;
-    height: 55vh;
-    overflow: hidden;
+    height: 45rem;
     position: relative;
-    border: solid;
   }
 
   #about .col-c .items{
@@ -734,23 +733,23 @@ footer .social-links {
   }
 
   #about .col-c #slide1:checked ~ .s1{
-    margin-left: 0;
+    margin-left: 9.5%;
   }
 
   #about .col-c #slide2:checked ~ .s1{
-    margin-left: -20%;
+    margin-left: -11.5%;
   }
 
   #about .col-c #slide3:checked ~ .s1{
-    margin-left: -40%;
+    margin-left: -31.5%;
   }
 
   #about .col-c #slide4:checked ~ .s1{
-    margin-left: -60%;
+    margin-left: -51%;
   }
 
   #about .col-c #slide5:checked ~ .s1{
-    margin-left: -80%;
+    margin-left: -71.5%;
   }
 
   #about .col-c input{
@@ -768,16 +767,18 @@ footer .social-links {
   #about .col-c .bar{
     width: 7rem;
     height: 1.7rem;
-    border: .2rem solid #FFFFFF;
+    border: .2rem solid var(--brand-beige);
     border-radius: .5rem;
     margin: .6rem;
     cursor: pointer;
     transition: .3s;
   }
 
-  #about .col-c .bar:hover{
-    background-color: #FFFFFF;
+  #about .col-c .bar:hover, #about .col-c{
+    background-color: var(--brand-beige);
   }
+
+  /* SLIDER END */
 
   #about .col-d {
     text-align: center;
@@ -810,8 +811,6 @@ footer .social-links {
   }
 
   #contact .col-a{
-    align-self: center;
-
     margin: auto;
   }
 
