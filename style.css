@@ -687,6 +687,8 @@ footer .social-links {
   /*==== ABOUT ======================= */
 
   #about .wrapper {
+    width: 100%;
+    padding: 0;
     grid-template-columns: 48rem 1fr;
     grid-template-areas: 'A B'
                          'C C'
@@ -704,33 +706,77 @@ footer .social-links {
   }
 
   #about .col-c{
-    width: 100vw;
-    margin: auto;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    position: relative;
+    border: solid;
   }
 
   #about .col-c .items{
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
+   display: flex;
+   width: 300%;
+   height: 100%;
   }
 
   #about .col-c .items .item{
-    flex: none;
-    width: 60%;
-    height: 400px;
-    scroll-snap-align: start;
-    pointer-events: none;
-    margin-inline: 50px;
+    width: 20%;
+    height: 100%;
+    transition: 1s;
   }
 
-  #about img{
-    width: 100%;
+  #about .col-c img{
+    width: 80%;
     height: 100%;
-
     object-fit: cover;
+    border: .2rem solid #FFFFFF;
+    border-radius: 2rem;
+  }
+
+  #about .col-c #slide1:checked ~ .s1{
+    margin-left: 0;
+  }
+
+  #about .col-c #slide2:checked ~ .s1{
+    margin-left: -20%;
+  }
+
+  #about .col-c #slide3:checked ~ .s1{
+    margin-left: -40%;
+  }
+
+  #about .col-c #slide4:checked ~ .s1{
+    margin-left: -60%;
+  }
+
+  #about .col-c #slide5:checked ~ .s1{
+    margin-left: -80%;
+  }
+
+  #about .col-c input{
+    display: none;
+  }
+
+  #about .col-c .input-navigation{
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  #about .col-c .bar{
+    width: 7rem;
+    height: 1.7rem;
+    border: .2rem solid #FFFFFF;
+    border-radius: .5rem;
+    margin: .6rem;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  #about .col-c .bar:hover{
+    background-color: #FFFFFF;
   }
 
   #about .col-d {
