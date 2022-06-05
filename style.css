@@ -774,7 +774,7 @@ footer .social-links {
     transition: .3s;
   }
 
-  #about .col-c .bar:hover, #about .col-c{
+  #about .col-c .bar:active{
     background-color: var(--brand-beige);
   }
 
