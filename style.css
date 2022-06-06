@@ -463,9 +463,11 @@ footer .social-links {
   body {
     overflow: auto;
   }
+
   .wrapper {
     width: min(112rem, 100%);
     display: grid;
+    padding-inline: 0;
   }
 
   .col-a {
@@ -663,10 +665,14 @@ footer .social-links {
   }
 
   #home img {
-    width: 42rem;
+    width: 38rem;
   }
 
   /*==== SERVICES ======================= */
+
+  section#services{
+    padding-top: 1rem;
+  }
 
   #services h2 {
     width: 47rem;

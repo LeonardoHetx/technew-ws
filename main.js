@@ -83,4 +83,4 @@ ScrollReveal({
 
    //SLIDER SECTION#ABOUT
 
-   document.querySelector('#slide1').style.backgroundColor = 'red'
+   let images = document.querySelector('#slide1').style.backgroundColor = 'red'
