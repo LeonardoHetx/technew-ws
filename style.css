@@ -700,7 +700,6 @@ footer .social-links {
   }
 
   #about .wrapper {
-    padding: 0;
     grid-template-columns: 48rem 1fr;
     grid-template-areas: 'A B'
                          'C C'
