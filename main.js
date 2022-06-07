@@ -83,4 +83,12 @@ ScrollReveal({
 
    //SLIDER SECTION#ABOUT
 
-   let images = document.querySelector('#slide1').style.backgroundColor = 'red'
+   let numbersHome = document.querySelector('#home h3:nth-child(1)').innerText = n1
+
+   
+      for (n1=0; n1 < 3500; n++){
+         console.log(n1)
+   
+      }
+
+      
