@@ -81,14 +81,24 @@ ScrollReveal({
    #about .content,
    #about .content img`);
 
-   //SLIDER SECTION#ABOUT
+//#HOME .STATS COUNTER
 
-   let numbersHome = document.querySelector('#home h3:nth-child(1)').innerText = n1
+function toCount(x,b,a,c){
+   let n1 = 0
+let count = setInterval(() => {
+   var numbersHome = document.getElementsByClassName('count')[a].innerText = `+${n1 += b}`
+   if (n1 === x) {
+      clearInterval(count)
+   }
+}, c)
+}
 
-   
-      for (n1=0; n1 < 3500; n++){
-         console.log(n1)
-   
-      }
+// toCount(number in text, how often, number position in class list, time to count)
+toCount(3500,100,0,20)
+toCount(15,1,1,70)
+toCount(10,1,2,90)
 
-      
+
+
+
+
