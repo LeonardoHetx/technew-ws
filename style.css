@@ -278,7 +278,7 @@ body.menu-expanded button path {
 #home::before {
   content: '';
   width: 100%;
-  height: calc(70% + var(--nav-height));
+  height: 108rem;
   background-color: var(--brand-light);
   display: block;
   position: absolute;
@@ -316,6 +316,10 @@ body.menu-expanded button path {
   gap: 6rem;
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
+}
+
+.appear{
+  visibility: hidden;
 }
 
 #home .stat h3 {
@@ -622,7 +626,7 @@ footer .social-links {
   }
 
   #home::before {
-    height: calc(82% - var(--nav-height));
+    height: 70rem;
   }
 
   #home .wrapper {

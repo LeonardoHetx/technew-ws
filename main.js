@@ -66,13 +66,20 @@ function closeMenu() {
 //SCROLL REVEAL API
 
 ScrollReveal({
-   origin: 'top',
+   origin: 'left',
    distance: '80px',
    duration: 700
 }).reveal(`
-   #home, 
+   #home , 
    #home img, 
-   #home .stat, 
+   #home .stat`);
+
+
+ScrollReveal({
+   origin: 'top',
+   distance: '80px',
+   duration: 700
+}).reveal(` 
    #services,
    #services header,
    #services .card,
@@ -83,22 +90,23 @@ ScrollReveal({
 
 //#HOME .STATS COUNTER
 
-function toCount(x,b,a,c){
+function toCount(x, b, a, c) {
    let n1 = 0
-let count = setInterval(() => {
-   var numbersHome = document.getElementsByClassName('count')[a].innerText = `+${n1 += b}`
-   if (n1 === x) {
-      clearInterval(count)
-   }
-}, c)
+   let count = setInterval(() => {
+      var numbersHome = document.getElementsByClassName('count')[a].innerText = `+${n1 += b}`
+      if (n1 === x) {
+         clearInterval(count)
+      }
+      textAppear(a)
+   }, c)
+}
+
+//puts visibility in texts
+function textAppear(a) {
+   document.getElementsByClassName('count')[a].classList.remove('appear')
 }
 
 // toCount(number in text, how often, number position in class list, time to count)
-toCount(3500,100,0,20)
-toCount(15,1,1,70)
-toCount(10,1,2,90)
-
-
-
-
-
+toCount(3500, 100, 0, 20)
+toCount(15, 1, 1, 70)
+toCount(10, 1, 2, 100)
