@@ -99,7 +99,6 @@ iframe, img {
 iframe{
   border: none;
   padding-bottom: 3rem;
-  border-bottom: .5rem solid var(--primary-color);
 }
 
 .button {
@@ -364,6 +363,58 @@ body.menu-expanded button path {
 
 #services .card h3 {
   margin-block: 1.6rem;
+}
+
+/*==== DEPOSITIONS ============================================ */
+
+#depositions header h2 {
+  margin-bottom: 6rem;
+}
+
+#depositions .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#depositions .card {
+  padding: 2.4rem;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
+}
+
+#depositions p{
+  padding-block: 2rem;
+}
+
+#depositions img{
+  width: 4.2rem;
+  margin-right: 1.6rem;
+}
+
+#depositions h4{
+  color: var(--primary-color);
+  display: inline-block;
+  transform: translateY(-50%); 
+}
+
+#depositions .btn-box{
+  margin-right: auto;
+}
+
+#depositions button{
+  padding-top: 2rem;
+  display: inline-block;
+  width: 5rem;
+  background-color: transparent;
+  border: none;
+}
+
+#depositions button:active svg{
+  border: .1rem solid var(--brand-light);
+  border-radius: 20%;
 }
 
 /*==== ABOUT ============================================ */
@@ -696,6 +747,29 @@ footer .social-links {
     width: 30%;
     flex-grow: 1;
   }
+
+  /*==== DEPOSITIONS ======================= */
+
+  section#depositions{
+    padding-top: 1rem;
+  }
+
+  #depositions h2 {
+    width: 47rem;
+    margin-inline: auto;
+  }
+
+  #depositions .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  #depositions .card {
+    width: 30%;
+    flex-grow: 1;
+  }
+
 
   /*==== ABOUT ======================= */
 
