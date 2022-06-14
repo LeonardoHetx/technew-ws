@@ -400,20 +400,57 @@ body.menu-expanded button path {
   transform: translateY(-50%); 
 }
 
-#depositions .btn-box{
-  margin-right: auto;
+#depositions .col-c{
+  position: relative;
 }
 
-#depositions button{
-  padding-top: 2rem;
-  display: inline-block;
-  width: 5rem;
-  background-color: transparent;
-  border: none;
+#depositions .col-c .items{
+ display: flex;
+ width: 300%;
 }
 
-#depositions button:active svg{
-  border: .1rem solid var(--brand-light);
+#depositions .col-c .items .item{
+  width: 20%;
+  height: 100%;
+  transition: 1s;
+}
+
+#depositions .col-c #slide1:checked ~ .s1{
+  margin-left: 9.5%;
+}
+
+#depositions .col-c #slide2:checked ~ .s1{
+  margin-left: -11.5%;
+}
+
+#depositions .col-c #slide3:checked ~ .s1{
+  margin-left: -31.5%;
+}
+
+#depositions .col-c #slide4:checked ~ .s1{
+  margin-left: -51%;
+}
+
+#depositions .col-c #slide5:checked ~ .s1{
+  margin-left: -71.5%;
+}
+
+#depositions .col-c .input-navigation{
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+#depositions .col-c .bar{
+  margin: .6rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#depositions .col-c .bar:active svg{
+  border: .2rem solid var(--bg-light);
   border-radius: 20%;
 }
 
@@ -752,6 +789,7 @@ footer .social-links {
 
   section#depositions{
     padding-top: 1rem;
+    overflow: hidden;
   }
 
   #depositions h2 {
@@ -769,7 +807,6 @@ footer .social-links {
     width: 30%;
     flex-grow: 1;
   }
-
 
   /*==== ABOUT ======================= */
 
@@ -790,7 +827,7 @@ footer .social-links {
     text-align: justify;
   }
 
-  /* SLIDER START */
+  /* #ABOUT SLIDER START */
 
   #about .col-c{
     width: 100%;
