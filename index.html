@@ -216,11 +216,12 @@
       </header>
       <div class="col-c">
         <div class="cards items">
-          <input type="radio" name="slide" id="slide1" checked>
-          <input type="radio" name="slide" id="slide2">
-          <input type="radio" name="slide" id="slide3">
-          <input type="radio" name="slide" id="slide4">
-          <input type="radio" name="slide" id="slide5">
+          <input type="radio" name="slide" id="sec1" checked>
+          <input type="radio" name="slide" id="sec2">
+          <input type="radio" name="slide" id="sec3">
+          <input type="radio" name="slide" id="sec4">
+          <input type="radio" name="slide" id="sec5">
+
           <div class="card item s1">
             <svg width="45" height="31" viewBox="0 0 45 31" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -291,23 +292,34 @@
             <img src="assets/woman-user-client.png" alt="Woman User">
             <h4>Wanessa Souza</h4>
           </div>
+
           <div class="input-navigation">
-            <label class="bar" for="slide">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.5">
-                  <rect width="40" height="40" rx="6" transform="matrix(-1 0 0 1 40 0)" fill="#00856F" />
-                  <path d="M23 26L17 20L23 14" stroke="white" stroke-width="2" stroke-linecap="round"
+            <div class="arrows">
+              <label class="arrow" for="slide1">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.5">
+                    <rect width="40" height="40" rx="6" transform="matrix(-1 0 0 1 40 0)" fill="#00856F" />
+                    <path d="M23 26L17 20L23 14" stroke="white" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg></label>
+              <label class="arrow" for="slide2">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="6" fill="#00856F" />
+                  <path d="M17 26L23 20L17 14" stroke="white" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
-                </g>
-              </svg></label>
-            <label class="bar" for="slide2">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="40" height="40" rx="6" fill="#00856F" />
-                <path d="M17 26L23 20L17 14" stroke="white" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </label>
+                </svg>
+              </label>
+            </div>
+
+            <div class="bars">
+              <label class="bar" for="sec1"></label>
+              <label class="bar" for="sec2"></label>
+              <label class="bar" for="sec3"></label>
+              <label class="bar" for="sec4"></label>
+              <label class="bar" for="sec5"></label>
+            </div>
           </div>
         </div>
       </div>
