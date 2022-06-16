@@ -368,14 +368,12 @@ body.menu-expanded button path {
 
 /*==== DEPOSITIONS ============================================ */
 
-#depositions header h2 {
-  margin-bottom: 6rem;
+#depositions .wrapper{
+  position: relative;
 }
 
-#depositions .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
+#depositions header h2 {
+  margin-bottom: 6rem;
 }
 
 #depositions .card {
@@ -401,43 +399,40 @@ body.menu-expanded button path {
   transform: translateY(-50%);
 }
 
-#depositions .col-c {
-  position: relative;
-}
-
 #depositions .col-c .items {
-  display: flex;
+  display: inline-block;
   width: 300%;
+  border: solid blue;
 }
 
 #depositions .col-c .cards input[type='radio'] {
   display: none;
 }
 
+.col-c{
+  border: solid;
+  height: 25rem;
+}
+
 #depositions .col-c .items .item {
-  width: 20%;
-  height: 100%;
+  display: inline-block;
+  width: 500px;
+  height: 25rem;
   transition: 1s;
+  margin-left: 4rem;
+  border: solid;
 }
 
 #depositions .col-c #sec1:checked ~ .s1 {
-  margin-left: 8.5%;
+  
 }
 
 #depositions .col-c #sec2:checked ~ .s1 {
-  margin-left: -17.9%;
+  margin-left: -79.8%;
 }
 
 #depositions .col-c #sec3:checked ~ .s1 {
-  margin-left: -68%;
-}
-
-#depositions .col-c #sec4:checked ~ .s1 {
-  margin-left: -45%;
-}
-
-#depositions .col-c #sec5:checked ~ .s1 {
-  margin-left: -63.5%;
+  margin-left: -134.8%;
 }
 
 #depositions .col-c .input-navigation {
@@ -816,7 +811,6 @@ footer .social-links {
 
   section#depositions {
     padding-top: 1rem;
-    overflow: hidden;
   }
 
   #depositions h2 {
@@ -826,16 +820,7 @@ footer .social-links {
 
   #depositions .col-c {
     grid-area: auto;
-  }
-
-  #depositions .cards {
-    flex-direction: row;
-    gap: 4rem;
-  }
-
-  #depositions .card {
-    width: 100%;
-    flex-grow: 1;
+    overflow: hidden;
   }
 
   /*==== ABOUT ======================= */
