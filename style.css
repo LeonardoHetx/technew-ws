@@ -765,8 +765,6 @@ footer .social-links {
     padding: 6rem;
     gap: 0;
     width: 100%;
-
-    /* transform: translateX(-1%); */
   }
 
   #home .stats .stat + .stat {
