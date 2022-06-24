@@ -399,11 +399,6 @@ body.menu-expanded button path {
   transform: translateY(-50%);
 }
 
-#depositions .col-c .items {
-  display: inline-block;
-  width: 300rem;
-}
-
 #depositions .col-c .cards input[type='radio'] {
   display: none;
 }
@@ -424,6 +419,11 @@ body.menu-expanded button path {
   overflow: hidden;
   width: 90rem;
   margin: auto;
+}
+
+#depositions .col-c .items {
+  display: inline-block;
+  width: 300rem;
 }
 
 #depositions .col-c .items .item {
@@ -566,7 +566,11 @@ footer .social-links {
   opacity: 0;
   visibility: hidden;
   transform: translateY(120%);
-  transition: 0.2s;
+  transition: .2s;
+}
+
+#backToTopButton:hover circle{
+  fill: var(--brand-hover);
 }
 
 #backToTopButton.show {
@@ -577,6 +581,7 @@ footer .social-links {
 
 #backToTopButton circle {
   fill: var(--primary-color);
+  transition: fill .3s;
 }
 
 /*==== RESPONSIVE ============================================ */
@@ -813,6 +818,11 @@ footer .social-links {
   #services .card {
     width: 30%;
     flex-grow: 1;
+    transition: .2s
+  }
+
+  #services .card:hover {
+    scale: 1.1;
   }
 
   /*==== DEPOSITIONS ======================= */
@@ -828,7 +838,6 @@ footer .social-links {
 
   #depositions .col-c {
     grid-area: auto;
-    overflow: hidden;
   }
 
   /*==== ABOUT ======================= */
@@ -965,6 +974,11 @@ footer .social-links {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    transition: scale .3s;
+  }
+
+  #about .col-d ul.companies:hover {
+    scale: 1.1;
   }
 
   /*==== CONTACT ======================= */
