@@ -110,3 +110,22 @@ function textAppear(a) {
 toCount(3500, 100, 0, 20)
 toCount(15, 1, 1, 70)
 toCount(10, 1, 2, 100)
+
+
+//#DEPOSITIONS ARROW PREV AND NXT
+
+let arrowL = document.getElementById("arrowL")
+let arrowR = document.getElementById("arrowR")
+
+arrowR.addEventListener("click", function() {
+   x = 1
+
+   
+   arrowR.setAttribute("for", `sec${x++}`)
+   
+   
+   while(x<3){
+      x++
+   }
+   console.log(x)
+})

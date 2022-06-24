@@ -401,42 +401,52 @@ body.menu-expanded button path {
 
 #depositions .col-c .items {
   display: inline-block;
-  width: 300%;
-  border: solid blue;
+  width: 300rem;
 }
 
 #depositions .col-c .cards input[type='radio'] {
   display: none;
 }
 
-.col-c{
-  border: solid;
-  height: 25rem;
+#depositions .col-c .cards input[type='radio']#sec1:checked ~ .input-navigation > .bars > .bar[for=sec1] {
+  background-color: var(--primary-color)
+}
+
+#depositions .col-c .cards input[type='radio']#sec2:checked ~ .input-navigation > .bars > .bar[for=sec2] {
+  background-color: var(--primary-color)
+}
+
+#depositions .col-c .cards input[type='radio']#sec3:checked ~ .input-navigation > .bars > .bar[for=sec3] {
+  background-color: var(--primary-color)
+}
+
+#depositions .col-c{
+  overflow: hidden;
+  width: 90rem;
+  margin: auto;
 }
 
 #depositions .col-c .items .item {
   display: inline-block;
-  width: 500px;
-  height: 25rem;
+  width: 14%;
   transition: 1s;
   margin-left: 4rem;
-  border: solid;
 }
 
 #depositions .col-c #sec1:checked ~ .s1 {
-  
+  margin-left: -25rem;
 }
 
 #depositions .col-c #sec2:checked ~ .s1 {
-  margin-left: -79.8%;
+  margin-left: -210.4rem;
 }
 
 #depositions .col-c #sec3:checked ~ .s1 {
-  margin-left: -134.8%;
+  margin-left: -132.1%;
 }
 
 #depositions .col-c .input-navigation {
-  width: 100%;
+  width: 90%;
   position: absolute;
   left: 50%;
   bottom: -10rem;
@@ -472,8 +482,8 @@ body.menu-expanded button path {
   transition: 0.1s;
 }
 
-#depositions .col-c .bar:active {
-  background-color: var(--primary-color);
+ #depositions #sec1::before:checked .bar {
+  background-color: red;
 }
 
 /*==== ABOUT ============================================ */
@@ -891,6 +901,26 @@ footer .social-links {
 
   #about .col-c input {
     display: none;
+  }
+
+  #about .col-c .items input[type='radio']#slide1:checked ~ .input-navigation > .bar[for=slide1] {
+    background-color: var(--brand-beige);
+  }
+
+  #about .col-c .items input[type='radio']#slide2:checked ~ .input-navigation > .bar[for=slide2] {
+    background-color: var(--brand-beige);
+  }
+
+  #about .col-c .items input[type='radio']#slide3:checked ~ .input-navigation > .bar[for=slide3] {
+    background-color: var(--brand-beige);
+  }
+
+  #about .col-c .items input[type='radio']#slide4:checked ~ .input-navigation > .bar[for=slide4] {
+    background-color: var(--brand-beige);
+  }
+
+  #about .col-c .items input[type='radio']#slide5:checked ~ .input-navigation > .bar[for=slide5] {
+    background-color: var(--brand-beige);
   }
 
   #about .col-c .input-navigation {
