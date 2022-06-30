@@ -446,13 +446,14 @@ body.menu-expanded button path {
 }
 
 #depositions .col-c .input-navigation {
-  width: 90%;
+  width: 100%;
   position: absolute;
   left: 50%;
   bottom: -10rem;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
+  padding-inline: 10%;
 }
 
 #depositions .col-c .arrow {
@@ -818,7 +819,7 @@ footer .social-links {
   #services .card {
     width: 30%;
     flex-grow: 1;
-    transition: .2s
+    transition: scale .3s
   }
 
   #services .card:hover {
@@ -965,21 +966,41 @@ footer .social-links {
     padding-bottom: 4.3rem;
   }
 
+  #about .col-d svg{
+    height: 7rem;
+    margin-inline: 4rem;
+    transition: scale .3s;
+  }
+
+  #about .col-d li:hover svg{
+    scale: 1.6;
+  }
+
+  #about .col-d li:hover + li svg{
+    scale: 1.4;
+  }
+
+  #about .col-d li:hover + li svg + svg{
+    scale: 1.2;
+  }
+
   #about .col-d svg path {
     fill: var(--primary-color);
   }
 
   #about .col-d ul.companies {
+    height: 7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     transition: scale .3s;
+
   }
 
-  #about .col-d ul.companies:hover {
+  /* #about .col-d ul.companies:hover {
     scale: 1.1;
-  }
+  } */
 
   /*==== CONTACT ======================= */
 

@@ -70,9 +70,9 @@ ScrollReveal({
    distance: '80px',
    duration: 700
 }).reveal(`
-   #home , 
-   #home img, 
-   #home .stat`);
+   #homeToScroll , 
+   #homeToScroll img, 
+   #homeToScroll .stat`);
 
 
 ScrollReveal({
