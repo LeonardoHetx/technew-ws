@@ -119,11 +119,9 @@ let arrowR = document.getElementById("arrowR")
 
 arrowR.addEventListener("click", function() {
    x = 1
-
-   
+ 
    arrowR.setAttribute("for", `sec${x++}`)
-   
-   
+     
    while(x<3){
       x++
    }

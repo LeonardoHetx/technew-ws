@@ -808,7 +808,7 @@ footer .social-links {
   }
 
   #services h2 {
-    width: 47rem;
+    width: 50rem;
     margin-inline: auto;
   }
 
@@ -866,24 +866,28 @@ footer .social-links {
   /* #ABOUT SLIDER START */
 
   #about .col-c {
-    width: 100%;
     height: 45rem;
     position: relative;
+    border: solid;
   }
 
   #about .col-c .items {
     display: flex;
-    width: 300%;
+    width: 400%;
     height: 100%;
+    border: solid;
   }
+
+  #about label{}
 
   #about .col-c .items .item {
     width: 20%;
     height: 100%;
     transition: 1s;
+    border: solid;
   }
 
-  #about .col-c img {
+  #about .col-c img { 
     width: 80%;
     height: 100%;
     object-fit: cover;
@@ -892,27 +896,36 @@ footer .social-links {
   }
 
   #about .col-c #slide1:checked ~ .s1 {
-    margin-left: 9.5%;
+    margin-left: 5.5%;
   }
 
   #about .col-c #slide2:checked ~ .s1 {
-    margin-left: -11.5%;
+    margin-left: -15%;
   }
 
   #about .col-c #slide3:checked ~ .s1 {
-    margin-left: -31.5%;
+    margin-left: -35%;
   }
 
   #about .col-c #slide4:checked ~ .s1 {
-    margin-left: -51%;
+    margin-left: -55.1%;
   }
 
   #about .col-c #slide5:checked ~ .s1 {
-    margin-left: -71.5%;
+    margin-left: -75%;
+  }
+
+  #about .col-c .items #slide1:checked ~ div:nth-child(6),
+  #about .col-c .items #slide2:checked ~ div:nth-child(7),
+  #about .col-c .items #slide3:checked ~ div:nth-child(8),
+  #about .col-c .items #slide4:checked ~ div:nth-child(9),
+  #about .col-c .items #slide5:checked ~ div:nth-child(10){
+    scale: 1.2;
   }
 
   #about .col-c input {
-    display: none;
+    /* display: none; */
+    opacity: 0;
   }
 
   #about .col-c .items input[type='radio']#slide1:checked ~ .input-navigation > .bar[for=slide1] {
