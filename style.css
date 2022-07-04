@@ -386,6 +386,10 @@ body.menu-expanded button path {
   border-radius: 0.6rem;
 }
 
+#depositions .card svg path{
+  fill: var(--primary-color);
+}
+
 #depositions p {
   padding-block: 2rem;
 }
@@ -458,6 +462,10 @@ body.menu-expanded button path {
   padding-inline: 10%;
 }
 
+#depositions .col-c .arrows svg rect{
+  fill: var(--primary-color)
+}
+
 #depositions .col-c .arrow {
   display: inline-block;
   margin: 0.6rem;
@@ -527,6 +535,10 @@ body.menu-expanded button path {
   gap: 0.8rem;
 }
 
+#contact ul li svg path{
+  stroke: var(--primary-color);
+}
+
 /*==== FOOTER ============================================ */
 
 footer {
@@ -542,8 +554,9 @@ footer .logo {
 }
 
 footer .logo svg {
-  width: 23.6rem;
+  width: 16.6rem;
   height: 3.1rem;
+  scale: 1.3;
 }
 
 footer .logo path {
@@ -745,6 +758,10 @@ footer .social-links {
     background-color: var(--primary-color);
     filter: brightness(1.3);
     border: none;
+  }
+
+  nav#navigation .logo svg{
+    margin-top: 1rem;
   }
 
   /*==== HOME ======================= */
@@ -1044,7 +1061,7 @@ footer .social-links {
   }
 
   footer .col-a {
-    align-self: center;
+    align-self: left;
   }
 
   footer .col-b {
