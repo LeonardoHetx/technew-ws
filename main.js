@@ -114,16 +114,28 @@ toCount(10, 1, 2, 100)
 
 //#DEPOSITIONS ARROW PREV AND NXT
 
-let arrowL = document.getElementById("arrowL")
-let arrowR = document.getElementById("arrowR")
+let arrow = document.getElementsByClassName('arrow')
 
-arrowR.addEventListener("click", function() {
-   x = 1
- 
-   arrowR.setAttribute("for", `sec${x++}`)
-     
-   while(x<3){
-      x++
-   }
-   console.log(x)
-})
+let bar = document.querySelectorAll("#depositions .bar")
+
+let arrows = [arrow[0],arrow[1]]
+
+let i = 0
+
+function prev(){
+   if(i <= 1) i = bar.length + 1
+   i--;
+   console.log(i)
+   return setCard(0)  
+}
+
+function next(){
+   if(i >= bar.length) i = 0
+   i++;
+   console.log(i)
+   return setCard(1)
+}
+
+function setCard(num){
+   return arrows[num].setAttribute('for', `sec${i}`)
+}

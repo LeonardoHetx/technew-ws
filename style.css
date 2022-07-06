@@ -7,9 +7,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
-
 :root {
   --hue: 206;
   --primary-color: hsl(var(--hue), 100%, 26%);
@@ -406,7 +403,9 @@ body.menu-expanded button path {
 }
 
 #depositions .col-c .cards input[type='radio'] {
-  display: none;
+  position: absolute;
+  left: -50%;
+  opacity: 0;
 }
 
 #depositions .col-c .cards input[type='radio']#sec1:checked ~ .input-navigation > .bars > .bar[for=sec1] {
@@ -491,10 +490,6 @@ body.menu-expanded button path {
   margin: 0.3rem;
   cursor: pointer;
   transition: 0.1s;
-}
-
- #depositions #sec1::before:checked .bar {
-  background-color: red;
 }
 
 /*==== ABOUT ============================================ */
@@ -885,23 +880,18 @@ footer .social-links {
   #about .col-c {
     height: 45rem;
     position: relative;
-    border: solid;
   }
 
   #about .col-c .items {
     display: flex;
     width: 400%;
     height: 100%;
-    border: solid;
   }
-
-  #about label{}
 
   #about .col-c .items .item {
     width: 20%;
     height: 100%;
     transition: 1s;
-    border: solid;
   }
 
   #about .col-c img { 
@@ -941,8 +931,8 @@ footer .social-links {
   }
 
   #about .col-c input {
-    /* display: none; */
     opacity: 0;
+    position: absolute;
   }
 
   #about .col-c .items input[type='radio']#slide1:checked ~ .input-navigation > .bar[for=slide1] {
