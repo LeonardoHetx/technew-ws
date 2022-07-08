@@ -378,7 +378,7 @@ body.menu-expanded button path {
 #depositions .card {
   padding: 2.4rem;
   text-align: left;
-  background-color: #ffffff;
+  background-color: var(--brand-light);
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
 }
@@ -408,15 +408,9 @@ body.menu-expanded button path {
   opacity: 0;
 }
 
-#depositions .col-c .cards input[type='radio']#sec1:checked ~ .input-navigation > .bars > .bar[for=sec1] {
-  background-color: var(--primary-color)
-}
-
-#depositions .col-c .cards input[type='radio']#sec2:checked ~ .input-navigation > .bars > .bar[for=sec2] {
-  background-color: var(--primary-color)
-}
-
-#depositions .col-c .cards input[type='radio']#sec3:checked ~ .input-navigation > .bars > .bar[for=sec3] {
+#depositions .col-c .cards #sec1:checked ~ .input-navigation .bar[for=sec1],
+#depositions .col-c .cards #sec2:checked ~ .input-navigation .bar[for=sec2],
+#depositions .col-c .cards #sec3:checked ~ .input-navigation .bar[for=sec3]{
   background-color: var(--primary-color)
 }
 
@@ -489,7 +483,7 @@ body.menu-expanded button path {
   border-radius: 50%;
   margin: 0.3rem;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.3s;
 }
 
 /*==== ABOUT ============================================ */
@@ -532,6 +526,25 @@ body.menu-expanded button path {
 
 #contact ul li svg path{
   stroke: var(--primary-color);
+  
+}
+
+#contact ul li svg.wpp path{
+  fill: var(--primary-color);
+}
+
+#contact ul li a,
+#contact ul li{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  transition: background-color .4s;
+  padding-inline: 1rem;
+  border-radius: 2rem;
+}
+
+#contact ul li:hover a{
+  background-color: var(--brand-light);
 }
 
 /*==== FOOTER ============================================ */
@@ -543,19 +556,10 @@ footer {
   color: #ffffff;
 }
 
-footer .logo {
+footer .logo img{
   display: inline-block;
   margin-bottom: 2.4rem;
-}
-
-footer .logo svg {
-  width: 16.6rem;
-  height: 3.1rem;
-  scale: 1.3;
-}
-
-footer .logo path {
-  fill: #ffffff;
+  scale: 1.1;
 }
 
 footer p {
@@ -572,7 +576,7 @@ footer .social-links {
 
 #backToTopButton {
   position: fixed;
-  bottom: 1rem;
+  bottom: 2.5rem;
   right: 2.5rem;
   opacity: 0;
   visibility: hidden;
@@ -594,6 +598,12 @@ footer .social-links {
   fill: var(--primary-color);
   transition: fill .3s;
 }
+
+ /*==== WHATSAPP BUTTON ======================= */
+
+ #wppButton {
+ position: absolute;
+ }
 
 /*==== RESPONSIVE ============================================ */
 
@@ -755,8 +765,10 @@ footer .social-links {
     border: none;
   }
 
-  nav#navigation .logo svg{
-    margin-top: 1rem;
+  nav#navigation .logo img{
+    margin-top: .5rem;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
   }
 
   /*==== HOME ======================= */
