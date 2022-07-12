@@ -15,10 +15,10 @@
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(40, 100%, 97%);
-  --brand-light: hsl(180, 12%, 97%);
+  --brand-light: hsl(calc(var(--hue-s) - 22), 23%, 89%);
   --brand-light-2: hsl(calc(var(--hue) - 10), 14%, 97%);
   --brand-hover: hsl(var(--hue), 100%, 14%);
-  --bg-light: hsl(0, 0%, 93%);
+  --bg-light: hsl(0, 0%, 96%);
 
   --nav-height: 7.2rem;
   font-size: 62.5%;
@@ -70,6 +70,11 @@ section header h4 {
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.08rem;
+  transition: letter-spacing 0.5s;
+}
+
+section header h4:hover {
+  letter-spacing: 0.5rem;
 }
 
 section header h2 {
@@ -109,7 +114,6 @@ iframe {
   border-radius: 4rem;
   padding: 1.6rem 3.2rem;
   width: fit-content;
-  color: var(--secondary-color);
   margin-bottom: 6rem;
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -127,15 +131,27 @@ iframe {
   background-color: var(--brand-hover);
 }
 
+.button span {
+  background-image: linear-gradient(
+    to right,
+    white 30%,
+    var(--secondary-color) 30%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;
+}
+
 .social-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3.2rem;
+  gap: 1.5rem;
 }
 
-.wpp-logo path{
-  fill: var(--secondary-color)
+.wpp-logo path {
+  fill: #ffffff;
 }
 
 /*==== NAVIGATION ============================================ */
@@ -155,7 +171,7 @@ nav .wrapper {
   justify-content: space-between;
 }
 
-nav .logo img{
+nav .logo img {
   background-color: var(--primary-color);
   border-radius: 2rem;
 }
@@ -335,6 +351,7 @@ body.menu-expanded button path {
 #home .stat h3 {
   font-size: 4.8rem;
   color: var(--headline);
+  text-shadow: 1px 1px px var(--headline);
   line-height: 130%;
   margin-bottom: 0.4rem;
 }
@@ -378,7 +395,7 @@ body.menu-expanded button path {
 
 /*==== DEPOSITIONS ============================================ */
 
-#depositions .wrapper{
+#depositions .wrapper {
   position: relative;
 }
 
@@ -394,7 +411,7 @@ body.menu-expanded button path {
   border-radius: 0.6rem;
 }
 
-#depositions .card svg path{
+#depositions .card svg path {
   fill: var(--primary-color);
 }
 
@@ -419,13 +436,13 @@ body.menu-expanded button path {
   opacity: 0;
 }
 
-#depositions .col-c .cards #sec1:checked ~ .input-navigation .bar[for=sec1],
-#depositions .col-c .cards #sec2:checked ~ .input-navigation .bar[for=sec2],
-#depositions .col-c .cards #sec3:checked ~ .input-navigation .bar[for=sec3]{
-  background-color: var(--primary-color)
+#depositions .col-c .cards #sec1:checked ~ .input-navigation .bar[for='sec1'],
+#depositions .col-c .cards #sec2:checked ~ .input-navigation .bar[for='sec2'],
+#depositions .col-c .cards #sec3:checked ~ .input-navigation .bar[for='sec3'] {
+  background-color: var(--primary-color);
 }
 
-#depositions .col-c{
+#depositions .col-c {
   overflow: hidden;
   width: 90rem;
   margin: auto;
@@ -466,8 +483,8 @@ body.menu-expanded button path {
   padding-inline: 10%;
 }
 
-#depositions .col-c .arrows svg rect{
-  fill: var(--primary-color)
+#depositions .col-c .arrows svg rect {
+  fill: var(--primary-color);
 }
 
 #depositions .col-c .arrow {
@@ -482,8 +499,9 @@ body.menu-expanded button path {
   border-radius: 20%;
 }
 
-#depositions .col-c .bars{
+#depositions .col-c .bars {
   margin-block: auto;
+  pointer-events: none;
 }
 
 #depositions .col-c .bar {
@@ -501,7 +519,7 @@ body.menu-expanded button path {
 
 #about {
   text-align: left;
-  background-color: var(--brand-light)
+  background-color: var(--brand-light);
 }
 
 #about header h2 {
@@ -535,26 +553,24 @@ body.menu-expanded button path {
   gap: 0.8rem;
 }
 
-#contact ul li svg path{
+#contact ul li svg path {
   stroke: var(--primary-color);
-  
 }
 
-#contact ul li svg.wpp path{
+#contact ul li svg.wpp path {
   fill: var(--primary-color);
 }
 
 #contact ul li a,
-#contact ul li{
+#contact ul li {
   text-decoration: none;
   color: black;
-  font-weight: 600;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
   padding-inline: 1rem;
   border-radius: 2rem;
 }
 
-#contact ul li:hover a{
+#contact ul li:hover a {
   background-color: var(--brand-light);
 }
 
@@ -567,7 +583,7 @@ footer {
   color: var(--secondary-color);
 }
 
-footer .logo img{
+footer .logo img {
   display: inline-block;
   margin-bottom: 2.4rem;
   scale: 1.1;
@@ -589,7 +605,7 @@ footer .social-links {
   position: fixed;
   bottom: 2.5rem;
   right: 2.5rem;
-  }
+}
 
 /*==== BACK TO TOP ============================================ */
 
@@ -600,10 +616,10 @@ footer .social-links {
   opacity: 0;
   visibility: hidden;
   transform: translateY(120%);
-  transition: .2s;
+  transition: 0.2s;
 }
 
-#backToTopButton:hover circle{
+#backToTopButton:hover circle {
   fill: var(--brand-hover);
 }
 
@@ -615,7 +631,28 @@ footer .social-links {
 
 #backToTopButton circle {
   fill: var(--primary-color);
-  transition: fill .3s;
+  transition: fill 0.3s;
+}
+
+/*==== SCROLLBAR ======================= */
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--brand-light);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--brand-light);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
 }
 
 /*==== RESPONSIVE ============================================ */
@@ -681,8 +718,7 @@ footer .social-links {
   }
 
   nav#navigation .close-menu,
-  nav#navigation .open-menu,
-  nav#navigation .social-links {
+  nav#navigation .open-menu {
     display: none;
   }
 
@@ -691,6 +727,12 @@ footer .social-links {
     align-items: center;
     justify-content: space-between;
     width: 60%;
+  }
+
+  nav#navigation .logo img {
+    margin-top: 0.5rem;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
   }
 
   nav#navigation .menu ul:nth-child(1) {
@@ -778,20 +820,26 @@ footer .social-links {
     border: none;
   }
 
-  nav#navigation .logo img{
-    margin-top: .5rem;
-    background-color: var(--primary-color);
-    border-radius: 2rem;
+  nav#navigation .social-links {
+    display: flex;
+  }
+
+  nav#navigation .social-links svg path {
+    stroke: var(--primary-color);
+  }
+
+  nav#navigation.scroll .social-links svg path {
+    stroke: var(--bg-light);
   }
 
   /*==== HOME ======================= */
 
   #home {
-    padding-top: var(--nav-height);
+    padding-top: 15rem;
   }
 
   #home::before {
-    height: 70rem;
+    height: 76rem;
   }
 
   #home .wrapper {
@@ -814,6 +862,17 @@ footer .social-links {
     font-size: 1.8rem;
   }
 
+  #home img {
+    width: 48rem;
+    display: block;
+    margin-inline: auto;
+    object-position: initial;
+  }
+
+  #home .col-c {
+    padding-top: 5rem;
+  }
+
   #home .stats {
     grid-area: C;
     flex-direction: row;
@@ -832,10 +891,6 @@ footer .social-links {
 
   #home .button {
     margin: 0;
-  }
-
-  #home img {
-    width: 38rem;
   }
 
   /*==== SERVICES ======================= */
@@ -858,7 +913,7 @@ footer .social-links {
   #services .card {
     width: 30%;
     flex-grow: 1;
-    transition: scale .3s
+    transition: scale 0.3s;
   }
 
   #services .card:hover {
@@ -919,11 +974,11 @@ footer .social-links {
     transition: 1s;
   }
 
-  #about .col-c img { 
+  #about .col-c img {
     width: 80%;
     height: 100%;
     object-fit: cover;
-    border: 0.2rem solid #ffffff;
+    border: 0.2rem solid var(--brand-light);
     border-radius: 2rem;
   }
 
@@ -951,7 +1006,7 @@ footer .social-links {
   #about .col-c .items #slide2:checked ~ div:nth-child(7),
   #about .col-c .items #slide3:checked ~ div:nth-child(8),
   #about .col-c .items #slide4:checked ~ div:nth-child(9),
-  #about .col-c .items #slide5:checked ~ div:nth-child(10){
+  #about .col-c .items #slide5:checked ~ div:nth-child(10) {
     scale: 1.2;
   }
 
@@ -960,24 +1015,37 @@ footer .social-links {
     position: absolute;
   }
 
-  #about .col-c .items input[type='radio']#slide1:checked ~ .input-navigation > .bar[for=slide1] {
-    background-color: var(--brand-beige);
-  }
-
-  #about .col-c .items input[type='radio']#slide2:checked ~ .input-navigation > .bar[for=slide2] {
-    background-color: var(--brand-beige);
-  }
-
-  #about .col-c .items input[type='radio']#slide3:checked ~ .input-navigation > .bar[for=slide3] {
-    background-color: var(--brand-beige);
-  }
-
-  #about .col-c .items input[type='radio']#slide4:checked ~ .input-navigation > .bar[for=slide4] {
-    background-color: var(--brand-beige);
-  }
-
-  #about .col-c .items input[type='radio']#slide5:checked ~ .input-navigation > .bar[for=slide5] {
-    background-color: var(--brand-beige);
+  #about
+    .col-c
+    .items
+    input[type='radio']#slide1:checked
+    ~ .input-navigation
+    > .bar[for='slide1'],
+  #about
+    .col-c
+    .items
+    input[type='radio']#slide2:checked
+    ~ .input-navigation
+    > .bar[for='slide2'],
+  #about
+    .col-c
+    .items
+    input[type='radio']#slide3:checked
+    ~ .input-navigation
+    > .bar[for='slide3'],
+  #about
+    .col-c
+    .items
+    input[type='radio']#slide4:checked
+    ~ .input-navigation
+    > .bar[for='slide4'],
+  #about
+    .col-c
+    .items
+    input[type='radio']#slide5:checked
+    ~ .input-navigation
+    > .bar[for='slide5'] {
+    background-color: var(--brand-light);
   }
 
   #about .col-c .input-navigation {
@@ -991,7 +1059,7 @@ footer .social-links {
   #about .col-c .bar {
     width: 7rem;
     height: 1.7rem;
-    border: 0.2rem solid var(--brand-beige);
+    border: 0.2rem solid var(--brand-light);
     border-radius: 0.5rem;
     margin: 0.6rem;
     cursor: pointer;
@@ -999,7 +1067,7 @@ footer .social-links {
   }
 
   #about .col-c .bar:hover {
-    background-color: var(--brand-beige);
+    background-color: var(--brand-light);
   }
 
   /* SLIDER END */
@@ -1014,18 +1082,18 @@ footer .social-links {
     padding-bottom: 4.3rem;
   }
 
-  #about .col-d svg{
+  #about .col-d svg {
     width: 10vw;
     height: 7rem;
     margin-inline: 2vw;
-    transition: scale .3s;
-  }
-
-  #about .col-d li{
     transition: scale 0.3s;
   }
 
-  #about .col-d li:hover{
+  #about .col-d li {
+    transition: scale 0.3s;
+  }
+
+  #about .col-d li:hover {
     scale: 1.5;
   }
 
@@ -1039,7 +1107,7 @@ footer .social-links {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    transition: scale .3s;
+    transition: scale 0.3s;
   }
 
   #about .col-d ul.companies:hover {

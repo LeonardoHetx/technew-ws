@@ -72,7 +72,7 @@ ScrollReveal({
 }).reveal(`
    #homeToScroll , 
    #homeToScroll img, 
-   #homeToScroll .stat`);
+   #homeToScroll .stat`)
 
 
 ScrollReveal({
@@ -86,7 +86,7 @@ ScrollReveal({
    #about,
    #about header,
    #about .content,
-   #about .content img`);
+   #about .content img`)
 
 //#HOME .STATS COUNTER
 
@@ -121,7 +121,6 @@ let bar = document.querySelectorAll("#depositions .bar")
 let arrows = [arrow[0],arrow[1]]
 
 let i = 0
-
 function prev(){
    if(i <= 1) i = bar.length + 1
    i--;
