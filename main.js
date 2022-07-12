@@ -120,7 +120,7 @@ let bar = document.querySelectorAll("#depositions .bar")
 
 let arrows = [arrow[0],arrow[1]]
 
-let i = 0
+let i = 1
 function prev(){
    if(i <= 1) i = bar.length + 1
    i--;

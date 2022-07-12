@@ -789,7 +789,7 @@ footer .social-links {
   nav#navigation .menu li a::after {
     content: '';
     width: 0%;
-    height: 0.2rem;
+    height: 0.3rem;
     background-color: var(--primary-color);
     position: relative;
     bottom: -1.95rem;
