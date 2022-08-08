@@ -15,7 +15,7 @@
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(40, 100%, 97%);
-  --brand-light: hsl(calc(var(--hue-s) - 22), 23%, 89%);
+  --brand-light: hsl(calc(var(--hue) - 22), 23%, 89%);
   --brand-light-2: hsl(calc(var(--hue) - 10), 14%, 97%);
   --brand-hover: hsl(var(--hue), 100%, 14%);
   --bg-light: hsl(0, 0%, 96%);
@@ -381,6 +381,10 @@ body.menu-expanded button path {
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
 }
+
+#services .card:hover {
+  transform: scale(1.1) !important;
+ }
 
 #services .card svg,
 #services .card svg path {
@@ -916,10 +920,6 @@ footer .social-links {
     transition: scale 0.3s;
   }
 
-  #services .card:hover {
-    scale: 1.1;
-  }
-
   /*==== DEPOSITIONS ======================= */
 
   section#depositions {
@@ -1111,7 +1111,7 @@ footer .social-links {
   }
 
   #about .col-d ul.companies:hover {
-    scale: 1.1;
+    scale: 1.1 !important
   }
 
   /*==== CONTACT ======================= */
