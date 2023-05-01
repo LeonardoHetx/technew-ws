@@ -1,4 +1,4 @@
-![TechNew](https://user-images.githubusercontent.com/82117002/235548813-e404a593-e60f-41ef-b67d-146b28c942e7.svg)
+![TechNew](https://user-images.githubusercontent.com/82117002/235549980-0b525aa9-7b28-4531-9aa4-0111848a694a.svg)
 
 # TechNew Informática
  
